@@ -1,0 +1,13 @@
+package edu.java.variable03;
+
+public class VariableMain03 {
+
+	public static void main(String[] args) {
+		// 문자(character) : 문자 1개. 자바에서는 작은 따옴표를 사용해야 함
+		// - 컴퓨터는 문자를 저장할 때, 문자에 해당하는 코드값 ( 정수 )
+		// 문자열(String) : 문자들의 배열. 큰 따옴표 사용.
+		
+
+	}
+
+}

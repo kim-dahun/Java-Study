@@ -1,0 +1,16 @@
+package sample.work1;
+
+class Test01 {
+	double a = 912;
+	double b = 161;
+	double exchange = 0.1*a + 0.1*b;
+}
+
+public class Test02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

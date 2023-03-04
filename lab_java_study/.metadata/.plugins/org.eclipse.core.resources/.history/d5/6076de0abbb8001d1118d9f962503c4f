@@ -1,0 +1,31 @@
+package sample.work1;
+
+import java.util.Scanner;
+
+public class Test01 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc1 = new Scanner(System.in);
+		int num = 1;
+		int tg = sc1.nextInt();
+		while (num == tg) {
+			if(num == tg) {
+				System.out.println("목표 달성");
+				break;
+			
+			System.out.println("1을 더합니다.");
+			num++;
+			
+			
+			//if(num == (tg/2)) {
+				//System.out.println("목표치 절반에 도달했습니다.");
+				
+			}
+			
+			
+			}
+		}
+	}
+
+}

@@ -1,0 +1,17 @@
+package edu.java.variable02;
+
+public class VariableMain02 {
+
+	public static void main(String[] args) {
+		// 자바의 기본데이터 타입
+		// 정수 타입 : byte, short, int, long, char
+		// 실수 타입 : float, double
+		// 논리 타입 : boolean
+		
+		int integerValue = 1;
+		
+		long intvalue = 1000000000000L; // int의 범위를 넘는 수는 long 을 쓰고 숫자 뒤에 L을 붙여줌
+		
+	}
+
+}

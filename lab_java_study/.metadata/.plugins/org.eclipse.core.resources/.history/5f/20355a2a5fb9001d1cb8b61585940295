@@ -1,0 +1,22 @@
+package edu.java.conditional05;
+
+import java.util.Random;
+
+public class ConditionalMain05 {
+
+	public static void main(String[] args) {
+		// 난수 생성 방법 ( Random number )
+		
+		Random random = new Random(); // Random 타입의 변수 선언 및 초기화;
+		
+		int x = random.nextInt(5)+1; // 0 이상 5미만의 정수 난수를 만듦.
+		
+		System.out.println("x = " + x);
+		
+		int y = random.nextInt(5)+1;
+		
+		System.out.println("y = " + y);
+		
+	}
+
+}

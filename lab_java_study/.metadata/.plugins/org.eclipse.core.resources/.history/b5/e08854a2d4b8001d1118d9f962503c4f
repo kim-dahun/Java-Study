@@ -1,0 +1,28 @@
+package sample.work1;
+
+public class Test02 {
+
+	public static void main(String[] args) {
+		
+		int count = 0;
+		int num[] = new int[6];
+		
+		while(true) {
+			if ( count == 6) {
+				System.out.println("완료");
+				break;
+			}
+			
+			int num = (int) (Math.random() * 45) + 1;
+			System.out.println(num);
+			count++;
+			
+			while(true) {
+				
+			}
+		}
+		
+
+	}
+
+}

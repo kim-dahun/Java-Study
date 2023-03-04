@@ -1,0 +1,10 @@
+package edu.java.intro;
+
+public class IntroMain {
+	
+	public static void main(String[] args) {
+		System.out.println("안녕하세요!");
+	}
+// 패키지 생성 시 .을 사용하면 하위폴더로 인식함 EX. ede.java.intro edu>>java>>intro
+	
+}

@@ -1,0 +1,37 @@
+package edu.java.loop03;
+
+public class LoopMain03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// 1. 구구단 출력
+		
+		for ( int i = 1; i <= 9 ; i++) {
+			System.out.println("2 x " + i + " = " + 2*i);
+		
+	}
+		
+		// 2. 1-100까지 10개 단위로 정렬 / if문 for문 결합
+		for (int i = 1; i <=100 ; i++) {
+		if (i%10 == 1){ 
+			System.out.println();
+		}
+		System.out.print(i + "\t"); // \t 탭 키 만큼 공백 만듦.
+		
+		}
+				
+		
+		//2-1. if문 아예 안쓰고 만들기
+			for(int j = 10; j <=100 ; j+=10) {
+				System.out.println();
+				for(int i = j/10; i <=j*10 ; i++) {
+					System.out.print(i + "\t");
+				}
+				
+				
+			}
+		
+		
+	}
+}

@@ -1,0 +1,35 @@
+package edu.java.variable02;
+
+public class VariableMain02 {
+
+	public static void main(String[] args) {
+		// 자바의 기본데이터 타입
+		// 정수 타입 : byte, short, int, long, char
+		// 실수 타입 : float, double
+		// 논리 타입 : boolean
+		
+		int integerValue = 1;
+		
+		long intvalue = 1000000000000L; // int의 범위를 넘는 수는 long 을 쓰고 숫자 뒤에 L을 붙여줌
+		
+		double pi = 3.14;
+		
+		float pi2 = 3.14F;
+		
+		boolean x1 = 3>10;
+		System.out.println(integerValue);
+		System.out.println(intvalue);
+		System.out.println(pi);
+		System.out.println(x1);
+		
+		double a1 = 1.0;
+		double a2 = 2.0;
+		double dv1 = a1 / a2;
+		dv1 = (int) dv1;
+		System.out.println(dv1); // 정의한 변수가 연산에 쓰일 경우 기본값은 정의한 값 기준으로 나온다.
+		
+		String str = "1" + 5;
+		System.out.println(str);
+	}
+
+}

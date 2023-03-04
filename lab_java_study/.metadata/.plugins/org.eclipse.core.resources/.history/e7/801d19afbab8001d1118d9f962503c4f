@@ -1,0 +1,20 @@
+package sample.work1;
+
+public class Test01 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc1 = new Scanner();
+		int num = 1;
+		int tg = 
+		while (num > 10) {
+			System.out.println("1을 더합니다.");
+			num++;
+			
+			if(num > 10) {
+				System.out.println("목표치에 도달했습니다.");
+			}
+		}
+	}
+
+}

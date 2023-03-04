@@ -1,0 +1,26 @@
+package sample.work1;
+
+import java.util.Scanner;
+
+public class Test01 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc1 = new Scanner(System.in);
+		int num = 1;
+		int x1;
+		int x2;
+		
+		while (true) {
+			x1 = sc1.nextInt();
+			x2 = x2 + x1;
+		}
+		
+		
+			
+			
+			}
+		}
+	
+
+

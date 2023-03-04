@@ -1,0 +1,33 @@
+package sample.work1;
+
+import java.util.Scanner;
+
+public class Test01 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc1 = new Scanner(System.in);
+		int num = 1;
+		int x1;
+		int x2 = 0;
+		
+		while (true) {
+			if(num==3) {
+				System.out.println("총합은 " + x2 + " 점 입니다.");
+				break;
+			}
+			x1 = sc1.nextInt();
+			x2 = x2 + x1;
+			num++;
+			continue;
+			
+		}
+		
+		
+			
+			
+			}
+		}
+	
+
+

@@ -1,0 +1,7 @@
+package edu.java.switch03;
+
+// 열거형 자료 타입(enumeration type). 한정된 값(상수) 들만 갖는 데이터 타입
+
+public enum Season {
+
+}

@@ -1,0 +1,11 @@
+package sample.work1;
+
+public class Test02 {
+
+	public static void main(String[] args) {
+		
+		int num = (int) (Math.random() * 45) + 1;
+
+	}
+
+}
