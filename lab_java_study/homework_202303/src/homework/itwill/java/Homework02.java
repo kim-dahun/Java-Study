@@ -5,6 +5,8 @@ public class Homework02 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		for (int i = 1; i<=100; i++) { // 숫자 증가 반복, 숫자 100까지 증가 후 반복문 종료
+			// boolean condition1 = (n1 ==3 ) || (n1 ==6) || (n1 ==9 );
+			// boolean condition2 = (n10 ==3) || (n10 ==6) || (n10 ==9);
 			if ((i>=30 & i<=39) || (i>=60 & i<=69 )||(i>=90 & i<=99)){ // 30 - 39, 60 - 69 , 90 - 99 는 무조건 * 1개는 들어감.
 				if (i%10==3 || i%10==6 || i%10==9) { // 그중에서 3,6,9가 한번씩 더 들어가면 * 1개를 더 출력
 					System.out.print("*"); // 2번 조건에 따라 추가되는 별
