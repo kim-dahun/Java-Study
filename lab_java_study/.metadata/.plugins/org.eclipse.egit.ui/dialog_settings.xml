@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<list key="CommitDialog.authorValues">
+		<item value="[kim-dahun] &lt;ekgnsl2002@gmail.com&gt;"/>
+	</list>
+	<list key="CommitDialog.committerValues">
+		<item value="[kim-dahun] &lt;ekgnsl2002@gmail.com&gt;"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="file://C:\workspace_real\DahunKim.github.io\lab_java_study"/>
+	</list>
 	<section name="org.eclipse.egit.ui.internal.repository.CreateBranchPage$SourceSelectionDialog.dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="-7"/>
 		<item key="DIALOG_Y_ORIGIN" value="-131"/>
@@ -9,8 +18,20 @@
 	</section>
 	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
 		<item key="MAIN_SASH_FORM_ORIENTATION_VERTICAL" value="false"/>
-		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="200,200"/>
-		<item key="STAGING_SASH_FORM_WEIGHT" value="200,200"/>
+		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="500,500"/>
+		<item key="STAGING_SASH_FORM_WEIGHT" value="500,500"/>
 		<item key="sortItemState" value="false"/>
+	</section>
+	<section name="GitCommitMessageComponent">
+		<list key="C:\workspaces\lab-java\.git">
+			<item value="false"/>
+			<item value="[kim-dahun] &lt;ekgnsl2002@gmail.com&gt;"/>
+			<item value="sss"/>
+			<item value="[kim-dahun] &lt;ekgnsl2002@gmail.com&gt;"/>
+			<item value="e508f13fde21bdb4855098b5936292ee6770eca8"/>
+			<item value="0"/>
+			<item value="false"/>
+			<item value=""/>
+		</list>
 	</section>
 </section>

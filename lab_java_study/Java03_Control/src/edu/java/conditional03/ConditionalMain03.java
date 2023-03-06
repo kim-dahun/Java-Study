@@ -15,7 +15,7 @@ public class ConditionalMain03 {
 		// Ctrl + f11 = 자바 실행 기능
 		
 		// 논리 연산자 && = and / || = or
-		// 연산자의 종류 : = / 산술 / 비교 / 논리 / 복합매입 / 증감 / 삼항연산자
+		// 연산자의 종류 : = / 산술 / 비교 / 논리 / 복합대입 / 증감 / 삼항연산자
 		
 		
 		Scanner sc1 = new Scanner(System.in); // 입력장치 스캐너를 사용할 준비 완료
