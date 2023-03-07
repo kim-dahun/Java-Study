@@ -13,7 +13,7 @@ public class ArrayMain04 {
 		// 배열의 내용을 출력.
 		// 배열의 모든 원소의 합을 계산하고 출력.
 		// 배열 원소들의 평균을 double 타입으로 계산하고 출력.
-		// 중복 체크값 추가(Self-study)
+		// 중복 체크값 추가 + 배열 정렬 ( Self-Study )
 
 		Scanner scan = new Scanner(System.in);
 		Random ran = new Random();
