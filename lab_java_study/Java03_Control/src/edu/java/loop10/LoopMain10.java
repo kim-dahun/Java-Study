@@ -42,12 +42,12 @@ public class LoopMain10 {
 			case 4 : 
 				run = false; // run 값은 true 여서 반복 중이었으나, false 로 바꿔서 반복 멈춤
 			default:
-				System.out.println("잘못된 입력입니다. 다시 진행하세요.");}
+				System.out.println("잘못된 입력입니다. 다시 진행하세요.");
 			
 			
 			
 		}
 		System.out.println("프로그램 종료");
 	}
-
+	}
 }
