@@ -1,5 +1,7 @@
 package edu.java.array03;
 
+import java.util.Date;
+
 public class ArrayMain03 {
 
 	public static void main(String[] args) {
@@ -45,6 +47,11 @@ public class ArrayMain03 {
 		for (boolean x : tnf) {
 			System.out.print(x + " ");
 		}
+		System.out.println();
+		
+		Date date = new Date();
+		
+		System.out.println(date);
 		
 	}
 
