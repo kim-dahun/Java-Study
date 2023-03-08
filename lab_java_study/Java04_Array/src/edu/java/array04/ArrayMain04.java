@@ -8,11 +8,10 @@ public class ArrayMain04 {
 
 	public static void main(String[] args) {
 
-		// 정수 5개를 저장할 수 있는 배열을 선언
-		// 0 이상 9 이하의 정수 난수 5개를 배열에 저장.
+		// 정수 6개를 저장할 수 있는 배열을 선언
+		// 1 이상 45 이하의 정수 난수 6개를 배열에 저장.
 		// 배열의 내용을 출력.
-		// 배열의 모든 원소의 합을 계산하고 출력.
-		// 배열 원소들의 평균을 double 타입으로 계산하고 출력.
+		// 로또 장수 입력 받아서 입력 받은 수만큼 로또 출력.
 		// 중복 체크값 추가 + 배열 정렬 ( Self-Study )
 
 		Scanner scan = new Scanner(System.in);
