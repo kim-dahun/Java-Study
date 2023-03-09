@@ -16,7 +16,7 @@ public class ArrayMain09 {
 		// 최소값을 찾은 후 출력
 		
 		int elsum = 0;
-		int elavg = 0;
+		double elavg = 0;
 		int elmax = 0;
 		int elmin = 101;
 		
@@ -24,31 +24,26 @@ public class ArrayMain09 {
 		Random ran = new Random();
 		int[][] array = new int[3][];
 		int row = 0;
-		for (int col1 = 2 ; col1 <= 4 ; col1++) {
+		for (row = 0 ; row < array.length ; row++) {
 			
-			array[row] = new int[col1];
-			row++;
-			
-		}
-		
-		
-		
-		for (int i = 0 ; i < array.length ; i++) {
-			for (int j = 0 ; j < array[i].length ; j++) {
-				array[i][j] = ran.nextInt(0,101);
-				if (array[i][j] < elmin) {
-					elmin = array[i][j];
+			array[row] = new int[row+2];
+			for (int j = 0 ; j < array[row].length ; j++) {
+				array[row][j] = ran.nextInt(0,101);
+				if (array[row][j] < elmin) {
+					elmin = array[row][j]; // elmin = ( array[row][j] < elmin ) ? array[row][j] : elmin;
 				}
-				if (array[i][j] > elmax) {
-					elmax = array[i][j];
+				if (array[row][j] > elmax) { // elmax = ( array[row][j] > elmax ) ? array[row][j] : elmax;
+					elmax = array[row][j];
 				}
-				elsum += array[i][j];
+				elsum += array[row][j];
 			}
+			
 		}
+				
 		
 		int count = 0;
 		for ( int[] num2 : array) {
-			System.out.print("{");
+			System.out.print("{ ");
 			int elsum2 = 0;
 			for ( int num1 : num2) {
 				System.out.print(num1 + " ");
@@ -65,7 +60,8 @@ public class ArrayMain09 {
 			System.out.println();
 			
 		}
-		elavg=elsum/count;
+		elavg= (double)elsum/count;
+		
 		
 		System.out.println("합계 : " + elsum);
 		System.out.println("최대값 : " + elmax);

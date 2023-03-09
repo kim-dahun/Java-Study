@@ -1,5 +1,7 @@
 package edu.java.array01;
 
+import java.util.List;
+
 public class ArrayMain01 {
 
 	public static void main(String[] args) {
@@ -11,9 +13,10 @@ public class ArrayMain01 {
 
 		// 정수(int) 4개를 저장할 수 있는 배열 선언 및 초기화 ( 최초에 0 으로 초기화 )
 		int[] scores = new int[4]; // scores 는 int[4] 를 저장할 수 있는 메모리공간을 참조
+		int[] scores4 = new int[] {1,2,3,4,5}; // 두 개를 섞어서 사용도 가능. 이 경우는 뒤 [] 에 숫자를 넣으면 안됌.
+		int scores3[] = new int[5]; // [] 의 위치는 변수명 뒤에 와도 상관없음
 		// 배열은 생성 시 생성자 사용해서 선언
 		// 배열은 사용 전 반드시 초기화가 되어 있어야 함(length가 몇인지)
-		
 		// 배열에 특정 인덱스에 원소를 저장(재할당)
 		scores[0] = 100; // 0번 인덱스에 100이라는 값을 저장
 		scores[1] = 90; // 1번 인덱스에 90 이라는 값을 저장
@@ -46,7 +49,10 @@ public class ArrayMain01 {
 		// 향상된 for 문 ( enhanced for statement ). for-each 구문
 		for (int x : numbers) { // 순서대로 이동하며, 원소 발견하지 못하는 시점까지 반복
 			System.out.println(x); // for ( 변수선언(배열의 원소타입으로 선언) : 배열)
-		}
+		} 
+		
+		// 장점 : 코드가 간결해짐.
+		// 단점 : 배열에 값을 초기화하는 등의 작업은 할 수 없음.
 		
 		}
 

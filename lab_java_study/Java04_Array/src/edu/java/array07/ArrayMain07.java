@@ -75,7 +75,7 @@ public class ArrayMain07 {
 		System.out.println(array); // 2차원 배열
 		System.out.println(array[0]); // 2차원 배열의 인덱스 i번째, 원소는 1차원 배열
 		System.out.println(array[0][0]); // 2차원 배열의 인덱스 i번째의 j열 번째(i,j) 원소는 값 1개
-		System.out.println(array[1][1]); // 2행 2열의 숫자
+		System.out.println(array[1][0]); // 2행 1열의 숫자
 		
 		//2차원 배열의 length
 		
