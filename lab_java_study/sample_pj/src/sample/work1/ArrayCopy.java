@@ -12,22 +12,30 @@ public class ArrayCopy {
 		int[] oldnum = new int[old];
 		int[] newnum = new int[old];
 		Random rand = new Random();
+		int loopSt = rand.nextInt(5);
+		int limit = 3*loopSt+1;
 
 		for (int i = 0; i < oldnum.length;i++ ) {
-			oldnum[i] = rand.nextInt(45);
 			
-			
-			if (i == oldnum.length-1) {
+			oldnum[i] = rand.nextInt(45)+1;
+			 if (i == oldnum.length-1) {
+				
 				newnum = new int[old+add];
 				for (int j = 0; j < oldnum.length; j++) {
 					
 					newnum[j] = oldnum[j];
 				}
-				old += add;
-				oldnum = new int[old];
-				for (int k = 0; k < oldnum.length; k++) {
-					oldnum[k] = newnum[k];
+				
+				if ( i > limit) {
+					
+				} else {
+					old += add;
+					oldnum = new int[old];
+					for (int k = 0; k < oldnum.length; k++) {
+						oldnum[k] = newnum[k];
+					}
 				}
+				
 				
 			}
 			
@@ -36,9 +44,8 @@ public class ArrayCopy {
 				System.out.print(x + " ");
 			}
 			System.out.print("} ");
-			if (old > 11) {
-				break;
-			}
+			System.out.println();
+			
 		}
 		
 	}

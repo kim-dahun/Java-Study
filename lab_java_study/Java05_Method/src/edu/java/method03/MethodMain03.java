@@ -4,21 +4,43 @@ import java.util.Random;
 
 public class MethodMain03 {
 
+	public static int[] makeTestArray(int n1) {
+		
+		int[] sumarr = new int[n1];
+		
+		for (int i=0; i<sumarr.length; i++) {
+			int n2 = rand.nextInt(20);
+			sumarr[i]=n2;
+			
+		}
+		
+		
+		return sumarr;
+	}
+	
+	public static void printArray(int[] sumarr) {
+		
+		
+		System.out.print("배열 : { ");
+		for ( int x : sumarr) {
+			System.out.print(x + " ");
+		}
+		System.out.print("}");
+		System.out.println();
+		
+		return; // void 메서드에서는 retrun; 문을 생략해도 됨.
+	}
+	
+	
 	static Random rand = new Random();
 	
 	public static void main(String[] args) {
 		
 		int n1 = rand.nextInt(1,10);
 		
-		int[] sumarr = new int[n1];
+		int[] sumarr = makeTestArray(n1); // 배열 만드는 메서드 호출(n1개 배열원소 보유)
 		
-		System.out.print("배열 { ");
-		for (int i=0; i<sumarr.length; i++) {
-			int n2 = rand.nextInt(20);
-			sumarr[i]=n2;
-			System.out.print(sumarr[i] + " ");
-		}
-		System.out.print("}\n");
+		printArray(sumarr); // 배열을 출력하는 메서드 호출
 		
 		System.out.println("==============================");
 		
@@ -68,8 +90,9 @@ public class MethodMain03 {
      * @return 배열 arr의 모든 원소들의 평균.
      */
     // TODO
-    public static int mean(int[] arr) {
-    	int sum = 0;
+    public static double mean(int[] arr) {
+    	
+    	/*int sum = 0;
     	int count = 0;
     	
     	for (int i=0; i<arr.length ; i++) {
@@ -77,8 +100,10 @@ public class MethodMain03 {
     		count++;
     	}
     	
-    	int mean = sum/count;
-    	return mean;
+    	int mean = sum/count;*/
+    	// return mean 
+    	
+    	return (double) sum(arr)/arr.length;
     }
     /**
      * max
@@ -144,14 +169,23 @@ public class MethodMain03 {
      */
     // TODO
     public static int minAt(int[] arr) {
-    	int loc1 = arr[0];
-    	int min = arr[0];
+    	/*int loc1 = arr[0];
+    	/int min = arr[0];
     	for (int i = 0 ; i < arr.length ; i++) {
     		
     		if (arr[i] < min ) {
     			min = arr[i];
     			loc1 = i;
     		}
+    	}*/
+    	int loc1 = 0;
+    	for (int i = 0 ; i < arr.length; i++) {
+    		if(arr[i] == min(arr)) {
+    			loc1 = i;
+    			break;
+    		}
+    		
+    		
     	}
     	
     	return loc1;

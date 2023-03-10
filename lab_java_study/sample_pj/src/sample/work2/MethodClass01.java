@@ -42,6 +42,7 @@ public class MethodClass01 {
 		int n = scan.nextInt();
 		System.out.println(n + " 명의 정보 입력을 시작합니다. 순서대로 입력해주세요.");
 		
+		
 		for ( String newHuman[] : obj.info(n)) { // info 메서드를 사용하려면, HumanState를 생성한 obj를 같이 써줘야 인식이 가능함.
 			System.out.print("{ ");
 			for ( String x : newHuman) {
