@@ -22,6 +22,10 @@ public class Methodre01 {
 			
 			return result*=round(roundnum-1,number);
 			// rn =3 => 5*roundnum2{5}*roundnum1{5}
+			
+			// roundnum3 = 5*roundnum2
+			// roundnum2 = 5*roundnum1
+			// roundnum1 = 5;
 		}
 		
 			

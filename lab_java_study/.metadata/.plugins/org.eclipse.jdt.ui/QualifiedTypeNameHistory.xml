@@ -8,7 +8,9 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="edu.java.method02.MethodMain02"/>
     <fullyQualifiedTypeName name="java.lang.ProcessHandle.Info"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="sample.work2.HumanState"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="edu.java.class02.BasicTv"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="sideproject.incomeexpenditure"/>
 </qualifiedTypeNameHistroy>
