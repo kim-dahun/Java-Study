@@ -24,9 +24,10 @@ public class AddProduct {
 	public void sell(int minusEa) {
 		
 		this.productEa -= minusEa;
+		System.out.println(this.productName + " 를 " + minusEa + " 개, 판매했고 "  + "자산 EA 당 "+ this.productPrice + " 원에 감소했습니다.");
 		this.productPriceAvg -= minusEa*productPrice;
 		this.productPrice = productPriceAvg/productEa;
-		System.out.println(this.productName + " 를 " + minusEa + " 개, 판매했고 "  + "자산 EA 당 "+ this.productPrice + " 원에 감소했습니다.");
+		
 	}
 	
 	public void eaProd() {

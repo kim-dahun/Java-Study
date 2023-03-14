@@ -9,12 +9,44 @@ public class BuyMain01 {
 		apple.eaProd(); // 재고 자산 갯수 표시
 		apple.avgAsset();
 		
-		apple.buy(600, 200);
+		
+		
+		apple.buy(750, 200);
 		apple.avgPrice();
 		apple.eaProd();
 		apple.avgAsset();
 		
 		apple.sell(250);
+		apple.avgPrice();
+		apple.eaProd();
+		apple.avgAsset();
+		
+		apple.sell(15);
+		apple.avgPrice();
+		apple.eaProd();
+		apple.avgAsset();
+		
+		apple.buy(1200, 175);
+		apple.avgPrice();
+		apple.eaProd();
+		apple.avgAsset();
+		
+		apple.sell(91);
+		apple.avgPrice();
+		apple.eaProd();
+		apple.avgAsset();
+		
+		apple.sell(15);
+		apple.avgPrice();
+		apple.eaProd();
+		apple.avgAsset();
+		
+		apple.buy(1350, 300);
+		apple.avgPrice();
+		apple.eaProd();
+		apple.avgAsset();
+		
+		apple.sell(150);
 		apple.avgPrice();
 		apple.eaProd();
 		apple.avgAsset();

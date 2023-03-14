@@ -9,8 +9,12 @@
     <fullyQualifiedTypeName name="edu.java.method02.MethodMain02"/>
     <fullyQualifiedTypeName name="java.lang.ProcessHandle.Info"/>
     <fullyQualifiedTypeName name="sample.work2.HumanState"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="edu.java.class02.BasicTv"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="sideproject.incomeexpenditure"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="sample.work3.reserve.DoReserve"/>
+    <fullyQualifiedTypeName name="sample.work3.reserve.TimeTable"/>
+    <fullyQualifiedTypeName name="edu.java.class07.Student"/>
+    <fullyQualifiedTypeName name="sample.work3.reserve.CheckReservation"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
