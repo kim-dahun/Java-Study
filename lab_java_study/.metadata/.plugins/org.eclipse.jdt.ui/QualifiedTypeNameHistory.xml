@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.List"/>
@@ -16,5 +15,11 @@
     <fullyQualifiedTypeName name="sample.work3.reserve.TimeTable"/>
     <fullyQualifiedTypeName name="edu.java.class07.Student"/>
     <fullyQualifiedTypeName name="sample.work3.reserve.CheckReservation"/>
+    <fullyQualifiedTypeName name="edu.java.class08.Account"/>
+    <fullyQualifiedTypeName name="java.math.MathContext"/>
+    <fullyQualifiedTypeName name="edu.java.modifier01.AccessTest"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="edu.java.modifier04.PublicClass"/>
+    <fullyQualifiedTypeName name="edu.java.modifier03.User"/>
 </qualifiedTypeNameHistroy>

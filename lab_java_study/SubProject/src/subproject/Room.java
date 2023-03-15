@@ -7,23 +7,28 @@ public class Room {
 	// 방 예약을 취소하는 기능
 	
 	//Field
-	
-	int startRev; // 예약 시작 시간
-	int endRev; // 예약 종료 시간
+	int roomNum;
+	double startTime; // 예약 시작 시간
+	double endTime; // 예약 종료 시간
 	String name; // 예약자명 호출
 	
 	//Constructor
-	public Room(int startRev, int endRev, String name ) {
-		
+	public Room(int roomNum, String name, double startRev, double endRev) {
+		this.roomNum = roomNum;
 		this.name = name;
-		this.startRev = startRev;
-		this.endRev = endRev;
+		this.startTime = startRev;
+		this.endTime = endRev;
 	}
 	
 	public Room() {}
 	
 	//Method
+	
+	
 	public boolean checkroom() { // instance.checkroom(); -> 현재 인스턴스(방) 이 예약자가 있는지 없는 지 확인;
+		
+		
+		
 		boolean result = false;
 		
 		if(this.name == null) {
@@ -35,16 +40,28 @@ public class Room {
 	}
 	
 	public void cancelroom() { // 방 예약 정보를 삭제해서 빈 방으로 만들기
-		
+		System.out.println(this.roomNum + "번 방이 취소되었습니다.");
 		this.name = null;
-		this.startRev = 0;
-		this.endRev = 0;
+		this.startTime = 0;
+		this.endTime = 0;
 	}
 	
 	public void printroominfo() {
+		System.out.println("============" + this.roomNum + " 번 방===========");
+		
+		int startHour = (int)(startTime*60)/60;
+		int endHour = (int)(endTime*60)/60;
+		int startMin = (int)(startTime*60)%60;
+		int endMin = (int)(endTime*60)%60;
+		int revHour = (int)((endTime-startTime)*60)/60;
+		int revMin =(int)((endTime-startTime)*60)%60;
+		
 		System.out.println("예약자명 : " + this.name);
-		System.out.println("사용 시작시간 : " + this.startRev + "시");
-		System.out.println("사용 종료시간 : " + this.endRev + "시");
+		System.out.println("사용 시작시간 : " + startHour + "시 " + startMin +"분");
+		System.out.println("사용 종료시간 : " + endHour + "시 " + endMin + "분");
+		System.out.println(name + " 님의 예약은 " + startHour + "시 " + startMin +"분" + "부터 " + endHour + "시 " + endMin + "분 까지 입니다.");
+		System.out.println("총 예약시간은 " + revHour + "시간 " + revMin + "분 입니다.");
+		System.out.println("=============================");
 	}
 	
 }
