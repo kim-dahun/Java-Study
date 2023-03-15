@@ -12,7 +12,20 @@ public class MainMethod {
 		// 예약 취소 기능
 		// 예약 정보 확인 기능
 		// 예약하려는 방의 예약정보 대조해서 중복 예약 막기.
-
+		Scanner scan = new Scanner(System.in);
+		
+		AccountInfo[] acc2;
+		AccountInfo acc1 = new AccountInfo();
+		acc1.signIn();
+		acc1.signIn();
+		acc1.signIn();
+		acc1.signIn();
+		acc2 = acc1.getSignInbackup();
+		System.out.println("회원명부");
+		for(AccountInfo x : acc2) {
+			System.out.print("아이디 : " + x.getUserId() + " 비밀번호 : " + x.getUserPw() + "\n");
+		}
+		
 		Room[] a1 = new Room[4]; // Room Class 배열 생성
 		
 		
@@ -26,7 +39,7 @@ public class MainMethod {
 			a1[i] = r1;
 		}
 		Reservation rev = new Reservation(); // 방 예약 관련 메서드를 보유하고 있는 클래스 선언;
-		Scanner scan = new Scanner(System.in);
+		
 
 		boolean end = true;
 		while (end) {
