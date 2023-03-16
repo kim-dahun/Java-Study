@@ -11,6 +11,7 @@ public class Room {
 	double startTime; // 예약 시작 시간
 	double endTime; // 예약 종료 시간
 	String name; // 예약자명 호출
+	String id;
 	
 	//Constructor
 	public Room(int roomNum, String name, double startRev, double endRev) {
@@ -18,6 +19,7 @@ public class Room {
 		this.name = name;
 		this.startTime = startRev;
 		this.endTime = endRev;
+		
 	}
 	
 	public Room() {}
@@ -44,6 +46,7 @@ public class Room {
 		this.name = null;
 		this.startTime = 0;
 		this.endTime = 0;
+		this.id = null;
 	}
 	
 	public void printroominfo() {
@@ -56,7 +59,7 @@ public class Room {
 		int revHour = (int)((endTime-startTime)*60)/60;
 		int revMin =(int)((endTime-startTime)*60)%60;
 		
-		System.out.println("예약자명 : " + this.name);
+		System.out.println("예약자명 : " + this.name + "아이디 : " + this.id);
 		System.out.println("사용 시작시간 : " + startHour + "시 " + startMin +"분");
 		System.out.println("사용 종료시간 : " + endHour + "시 " + endMin + "분");
 		System.out.println(name + " 님의 예약은 " + startHour + "시 " + startMin +"분" + "부터 " + endHour + "시 " + endMin + "분 까지 입니다.");

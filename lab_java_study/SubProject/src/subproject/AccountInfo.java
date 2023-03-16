@@ -7,6 +7,7 @@ public class AccountInfo {
 	private int accountNum;
 	private String userId;
 	private String userPw;
+	private String userName;
 	private int refNum;
 	private int reeNum;
 	private int count = 1;
@@ -20,8 +21,17 @@ public class AccountInfo {
 	}
 
 	// Method
+
 	public int getAccountNum() {
 		return accountNum;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public void setAccountNum(int accountNum) {
@@ -68,6 +78,13 @@ public class AccountInfo {
 		this.signInbackup = signInbackup;
 	}
 
+	public void memberList() {
+		System.out.println("회원명부");
+		for (AccountInfo x : signInbackup) {
+			System.out.print("아이디 : " + x.getUserId() + " 비밀번호 : " + x.getUserPw() + "\n");
+		}
+	}
+
 	public AccountInfo[] signIn() { // 회원 가입 메서드
 		AccountInfo[] newsignIn = new AccountInfo[count]; // 신규 회원 정보를 받을 배열(기존배열 개수 + 1개)
 		AccountInfo[] newsignInBackup = new AccountInfo[count + 1]; // 기존 회원 리스트를 백업 받을 배열 ( 기존배열 개수 + 2개)
@@ -93,7 +110,7 @@ public class AccountInfo {
 			signInbackup[i] = signIn; // 클래스 타입 배열원소를 기존 회원 리스트에 넣어서 초기화
 			signInbackup[i] = newsignInBackup[i]; // 초기화한 자리에 백업 배열의 자료를 다시 내려받음.
 		}
-		
+
 		boolean retry = false; // 중복 ID 체크 후 Id 입력 창으로 반복을 돌리기 위한 변수
 		boolean onOff = true; // 비밀번호 10자리 미만 체크 후 Pw 입력 창으로 반복문을 돌리기 위한 변수
 		System.out.println("회원가입을 시작합니다.");
@@ -110,30 +127,92 @@ public class AccountInfo {
 					retry = true; // 중복값이 존재하면 retry 변수를 true값으로 변경
 				}
 			}
-			if(retry == true) { // retry 가 true 값이면 false로 변경 후 Id 입력창으로 되돌아감.
+			if (retry == true) { // retry 가 true 값이면 false로 변경 후 Id 입력창으로 되돌아감.
 				retry = false;
 				continue;
 			}
-			
+
 			newsignIn[count - 1].setUserId(inputId); // 중복되지 않았으면 ID 입력값을 신규회원 배열에 입력
 			while (onOff) {
 				System.out.println("비밀번호를 입력해주세요.");
 				String inputPw = scan.next();
-				if (inputPw.length() < 10) { // 10자리 미만 체크 후 이상이어야 다음단계 진행
-					System.out.println("비밀번호는 10자리 이상 이어야 합니다.");
+				if (inputPw.length() < 10 || inputPw.length() > 15) { // 10자리 미만 체크 후 이상이어야 다음단계 진행
+					System.out.println("비밀번호는 10자리 이상, 15자리 미만 이어야 합니다.");
 					continue;
 				}
 				newsignIn[count - 1].setUserPw(inputPw); // 비밀번호가 10자리 이상이면, 신규회원 배열에 입력
 				onOff = false; // 반복 종료
 			}
+
+			System.out.println("이름을 입력하세요.");
+			String inputName = scan.next();
+			newsignIn[count - 1].setUserName(inputName);
+			while (true) {
+				System.out.println("생년월일을 입력하세요. <6자리>");
+				int inputrefNum = scan.nextInt();
+				if (inputrefNum < 100000 || inputrefNum > 999999) {
+					System.out.println("자릿수가 맞지 않습니다. 다시 입력해주세요.");
+					continue;
+				} else {
+					newsignIn[count - 1].setRefNum(inputrefNum);
+					break;
+				}
+			}
+
+			while (true) {
+				System.out.println("주민번호 뒷자리를 입력하세요. <7자리>");
+				int inputreeNum = scan.nextInt();
+				if (inputreeNum < 1000000 || inputreeNum > 9999999) {
+					System.out.println("자릿수가 맞지 않습니다. 다시 입력해주세요.");
+					continue;
+				} else {
+					newsignIn[count - 1].setRefNum(inputreeNum);
+					break;
+				}
+			}
 		}
+		System.out.println("회원 가입이 완료되었습니다.");
 
 		signInbackup[count - 1] = newsignIn[count - 1]; // 신규 회원 배열의 데이터를 기존 회원 리스트에 입력
-		
 
 		count++; // 다음 신규 회원 발생 시 회원을 받기 위해 배열 원소 index 1증가를 위한 count변수 증가
 
 		return signInbackup; // 기존 회원 리스트를 리턴. 회원 리스트 출력이나 Login 메서드에서 활용을 위해.
+	}
+
+	public AccountInfo login() {
+		AccountInfo accountinfo = new AccountInfo();
+		boolean loop = true;
+		
+
+			while (loop) {
+				System.out.println("ID를 입력하세요 >>>");
+				String id = scan.next();
+				System.out.println("PW를 입력하세요 >>>");
+				String pw = scan.next();
+			for (int i = 0; i < signInbackup.length; i++) {
+				if (id.equals(signInbackup[i].getUserId())) {
+					if (pw.equals(signInbackup[i].getUserPw())) {
+						System.out.println("로그인이 성공적으로 진행되었습니다.");
+						accountinfo = signInbackup[i];
+						loop = false;
+						
+						return accountinfo;
+
+					} 
+				} 
+				
+
+			}
+			if (loop) {
+				System.out.println(" 아이디나 비밀번호를 다시 확인해주세요.");
+				continue;
+			}
+			
+		}
+
+		return accountinfo;
+
 	}
 
 }

@@ -14,17 +14,15 @@ public class MainMethod {
 		// 예약하려는 방의 예약정보 대조해서 중복 예약 막기.
 		Scanner scan = new Scanner(System.in);
 		
-		AccountInfo[] acc2;
+		
 		AccountInfo acc1 = new AccountInfo();
+		AccountInfo acc2;
 		acc1.signIn();
 		acc1.signIn();
-		acc1.signIn();
-		acc1.signIn();
-		acc2 = acc1.getSignInbackup();
-		System.out.println("회원명부");
-		for(AccountInfo x : acc2) {
-			System.out.print("아이디 : " + x.getUserId() + " 비밀번호 : " + x.getUserPw() + "\n");
-		}
+		
+		acc2 = acc1.login();
+		
+		acc1.memberList();
 		
 		Room[] a1 = new Room[4]; // Room Class 배열 생성
 		
@@ -54,10 +52,11 @@ public class MainMethod {
 				for ( int i = 1; i<=select3 ; i++) {
 					if(select3==i && a1[i-1].name ==null) {
 						rev.Reserve();
-						a1[i-1].name = rev.name;
+						a1[i-1].name = acc2.getUserName();
 						a1[i-1].roomNum = i;
 						a1[i-1].startTime = rev.startNum;
 						a1[i-1].endTime = rev.endNum;
+						a1[i-1].id = acc2.getUserId();
 						break;
 					} 
 				}
