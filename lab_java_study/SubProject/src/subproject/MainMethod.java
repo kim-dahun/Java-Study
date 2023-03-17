@@ -17,12 +17,28 @@ public class MainMethod {
 		
 		AccountInfo acc1 = new AccountInfo();
 		AccountInfo acc2;
-		acc1.signIn();
-		acc1.signIn();
+		boolean start = true;
+		while(start) {
+		System.out.println("====== 회의실 예약 =====");
+		System.out.println();
+		System.out.println("1. 회원가입  2. 로그인  3. 종료");
+		int selectNew = scan.nextInt();
+		if(selectNew==1) {
+			acc1.signIn();
+			continue;
+		} else if(selectNew==2) {
+			acc2 = acc1.login();
+		} else if(selectNew==3) {
+			System.out.println("시스템 종료합니다.");
+			break;
+		} else {
+			System.out.println("잘못된 입력입니다.");
+			continue;
+		}
 		
-		acc2 = acc1.login();
 		
-		acc1.memberList();
+		
+		
 		
 		Room[] a1 = new Room[4]; // Room Class 배열 생성
 		
@@ -107,6 +123,8 @@ public class MainMethod {
 
 			}
 
+		}
+		
 		}
 	}
 }

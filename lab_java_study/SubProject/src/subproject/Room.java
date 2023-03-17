@@ -59,7 +59,7 @@ public class Room {
 		int revHour = (int)((endTime-startTime)*60)/60;
 		int revMin =(int)((endTime-startTime)*60)%60;
 		
-		System.out.println("예약자명 : " + this.name + "아이디 : " + this.id);
+		System.out.println("예약자명 : " + this.name + " / 아이디 : " + this.id);
 		System.out.println("사용 시작시간 : " + startHour + "시 " + startMin +"분");
 		System.out.println("사용 종료시간 : " + endHour + "시 " + endMin + "분");
 		System.out.println(name + " 님의 예약은 " + startHour + "시 " + startMin +"분" + "부터 " + endHour + "시 " + endMin + "분 까지 입니다.");

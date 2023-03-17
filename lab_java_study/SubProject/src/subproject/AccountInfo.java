@@ -81,7 +81,7 @@ public class AccountInfo {
 	public void memberList() {
 		System.out.println("회원명부");
 		for (AccountInfo x : signInbackup) {
-			System.out.print("아이디 : " + x.getUserId() + " 비밀번호 : " + x.getUserPw() + "\n");
+			System.out.print("List ( 아이디 : " + x.getUserId() + " 비밀번호 : " + x.getUserPw() + " )\n");
 		}
 	}
 
@@ -137,7 +137,16 @@ public class AccountInfo {
 				System.out.println("비밀번호를 입력해주세요.");
 				String inputPw = scan.next();
 				if (inputPw.length() < 10 || inputPw.length() > 15) { // 10자리 미만 체크 후 이상이어야 다음단계 진행
+					
+
 					System.out.println("비밀번호는 10자리 이상, 15자리 미만 이어야 합니다.");
+					continue;
+				}
+				
+				if (inputPw.matches(".*[a-z].*")) {
+
+				} else {
+					System.out.println("비밀번호는 반드시 영문자를 포함해야 합니다.");
 					continue;
 				}
 				newsignIn[count - 1].setUserPw(inputPw); // 비밀번호가 10자리 이상이면, 신규회원 배열에 입력
@@ -162,6 +171,7 @@ public class AccountInfo {
 			while (true) {
 				System.out.println("주민번호 뒷자리를 입력하세요. <7자리>");
 				int inputreeNum = scan.nextInt();
+
 				if (inputreeNum < 1000000 || inputreeNum > 9999999) {
 					System.out.println("자릿수가 맞지 않습니다. 다시 입력해주세요.");
 					continue;
@@ -183,32 +193,30 @@ public class AccountInfo {
 	public AccountInfo login() {
 		AccountInfo accountinfo = new AccountInfo();
 		boolean loop = true;
-		
 
-			while (loop) {
-				System.out.println("ID를 입력하세요 >>>");
-				String id = scan.next();
-				System.out.println("PW를 입력하세요 >>>");
-				String pw = scan.next();
+		while (loop) {
+			System.out.println("ID를 입력하세요 >>>");
+			String id = scan.next();
+			System.out.println("PW를 입력하세요 >>>");
+			String pw = scan.next();
 			for (int i = 0; i < signInbackup.length; i++) {
 				if (id.equals(signInbackup[i].getUserId())) {
 					if (pw.equals(signInbackup[i].getUserPw())) {
 						System.out.println("로그인이 성공적으로 진행되었습니다.");
 						accountinfo = signInbackup[i];
 						loop = false;
-						
+
 						return accountinfo;
 
-					} 
-				} 
-				
+					}
+				}
 
 			}
 			if (loop) {
 				System.out.println(" 아이디나 비밀번호를 다시 확인해주세요.");
 				continue;
 			}
-			
+
 		}
 
 		return accountinfo;

@@ -19,7 +19,7 @@ public class Reservation {
 		while (loop) {
 			System.out.println("예약 시작 시간을 입력하세요 >>>");
 			startNum = scan.nextDouble();
-			if (startNum % 10 > 100 || startNum > 24 || endNum < 0) {
+			if (startNum % 10 > 100 || startNum > 24 || startNum < 0 ) {
 				System.out.println("(0-24시) & 소수 첫째자리 까지만 사용 가능합니다.");
 
 			} else {
@@ -32,8 +32,8 @@ public class Reservation {
 			System.out.println("예약 종료 시간을 입력하세요 >>>");
 			endNum = scan.nextDouble();
 
-			if (endNum % 10 > 100 || endNum > 24 || endNum < 0 ) {
-				System.out.println("(0-24시) & 소수 첫째자리 까지만 사용 가능합니다.");
+			if (endNum % 10 > 100 || endNum > 24 || endNum < 0 || startNum>endNum) {
+				System.out.println("(0-24시, 시작시간보다 이후 시간) & 소수 첫째자리 까지만 사용 가능합니다.");
 
 			} else {
 				loop = false;

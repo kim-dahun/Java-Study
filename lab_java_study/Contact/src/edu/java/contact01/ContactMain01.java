@@ -1,5 +1,7 @@
 package edu.java.contact01;
 
+//2023-03-17 ERROR 발생 관련 상황에 대해 고민.
+
 import java.util.Scanner;
 
 public class ContactMain01 {
@@ -39,7 +41,7 @@ public class ContactMain01 {
 				app.searchContact();
 				break;
 			case (4): // 연락처 이름/전화번호/이메일 정보 수정하기
-				app.modifyContact();
+				app.updateContactByIndex();
 				break;
 			case (5): // 배열의 인덱스로 연락처 삭제하기
 				app.deleteContact();
@@ -53,15 +55,20 @@ public class ContactMain01 {
 
 	}
 
-	public void deleteContact() {
+	public void deleteContact() { // 내가 만든것
 		System.out.println("--- 연락처 삭제 ---");
 		System.out.println();
 		System.out.println("삭제하고 싶은 연락처의 순번을 입력해주세요.");
-		int inputNum = scanner.nextInt();
+		int inputNum = Integer.parseInt(scanner.nextLine());
+			if(inputNum<1 || inputNum>count) {
+				System.out.println("잘못된 입력입니다.");
+				return;
+			}
+		
 			for (int i = inputNum-1; i < count; i++) {
 				if(i==count-1) {
-					Contact resetContact = new Contact();
-					contacts[i] = resetContact;
+					
+					contacts[i] = null;
 				} else {
 					contacts[i] = contacts[i+1];
 				}
@@ -77,9 +84,9 @@ public class ContactMain01 {
 		System.out.println();
 		System.out.println(inputNum + "번 순서의 연락처 삭제했습니다.");
 		
-	}
+	} // 내가 만든것 끝
 
-	public void modifyContact() {
+	public void modifyContact() { // 내가 만든것
 		System.out.println("--- 연락처 수정 ---");
 		System.out.println();
 		boolean modifyRun = true;
@@ -108,29 +115,73 @@ public class ContactMain01 {
 				System.out.println("연락처에 없는 분입니다. 다시 입력해주세요.");
 			}
 
+		} 
+
+	} // modify 끝
+	
+	public void updateContactByIndex() { // 선생님
+		System.out.println();
+		boolean run = true;
+		
+		System.out.println("--- 연락처 수정 ---");
+		while(run) {
+		System.out.print("수정할 연락처 인덱스 입력>");
+		int index = Integer.parseInt(scanner.nextLine());
+		if(index>(count-1)||index<0) {
+			System.out.println("잘못된 입력값입니다.");
+			continue;
 		}
+		
+		System.out.print("수정 전: ");
+		contacts[index].printInfo();
+		
+		System.out.print("수정할 이름을 입력>");
+		String name = scanner.nextLine();
+		System.out.println("수정할 전화번호 입력>");
+		String phone = scanner.nextLine();
+		System.out.println("수정할 E-mail>");
+		String email = scanner.nextLine();
+		
+		// 수정할 인덱스의 정보를 업데이트
+		
+		contacts[index].setName(name);
+		contacts[index].setPhone(phone);
+		contacts[index].setEmail(email);
+		
+//		contacts[index] = new Contact(0,name,phone,email);
+		
+		System.out.println("수정 후: ");
+		contacts[index].printInfo();
+		run = false;
+		}
+	} // 선생님 끝
 
-	}
-
-	public void searchContact() {
+	public void searchContact() { //것가 짠것
 		System.out.println("--- 연락처 검색 ---");
 		boolean find = false;
+		
+	
+		
 		System.out.println();
 		System.out.print("이름을 검색해주세요>>"); // 인덱스 대신 이름 검색값 받기
 		String search = scanner.nextLine();
-
+		
+		
+		
 		for (int i = 0; i < count; i++) { // 배열원소인 Contact 클래스의 Name을 확인해서 일치하는 지 체크
-			if (search.contains(contacts[i].getName())) {
+			String check = contacts[i].getName();
+			if (check.matches(".*" + search + ".*")) {
 				contacts[i].printInfo();
 				find = true;
 			}
 		}
-		if (find = false) { // 일치하는 Name이 없으면 연락처가 없다고 표시하고, 마무리
+		if (find == false) { // 일치하는 Name이 없으면 연락처가 없다고 표시하고, 마무리
 			System.out.println("해당 이름의 연락처는 없습니다.");
 
 		}
 		find = false;
-	}
+		
+	} // 내가 짠것 종료
 
 	public void viewContact() {
 		System.out.println("--- 연락처 목록 ---");
@@ -142,20 +193,21 @@ public class ContactMain01 {
 	}
 
 	public void insertNewContact() {
-		if (count >= 5) {
+		if (count >= MAX_LENGTH) {
 			System.out.println("연락처가 가득 차 더 이상 등록할 수 없습니다.");
-		} else {
+			return; // void 에서 return은 그냥 메서드를 종료시키겠다
+		}
 
 			
 			System.out.println("--- 새 연락처 저장 ---");
 			System.out.print("이름을 입력하세요 > ");
-			String name = scanner.next(); // 공백을 포함해서 줄바꿈 직전까지 모든 문자열을 읽음.
+			String name = scanner.nextLine(); // 공백을 포함해서 줄바꿈 직전까지 모든 문자열을 읽음.
 			
 			System.out.print("전화번호를 입력하세요 > ");
-			String phone = scanner.next();
+			String phone = scanner.nextLine();
 			
 			System.out.print("E-mail을 입력하세요 > ");
-			String email = scanner.next();
+			String email = scanner.nextLine();
 			
 
 			// 입력받은 정보들로 Contact 타입의 객체를 생성.
@@ -170,7 +222,7 @@ public class ContactMain01 {
 
 			System.out.println("새 연락처 저장 성공");
 
-		}
+		
 	}
 
 	public int showMainMenu() {
@@ -180,8 +232,8 @@ public class ContactMain01 {
 		System.out.println("---------------------------------------------------------");
 		System.out.println("선택>");
 
-		int result=scanner.nextInt();
-		//result = Integer.parseInt(scanner.nextLine()); // 문자열을 Int 로 바꿔줌.
+//		int result=scanner.nextInt();
+		int result = Integer.parseInt(scanner.nextLine()); // 문자열을 Int 로 바꿔줌.
 		
 
 		return result;
