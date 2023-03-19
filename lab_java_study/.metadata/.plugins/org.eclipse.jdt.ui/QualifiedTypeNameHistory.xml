@@ -24,9 +24,13 @@
     <fullyQualifiedTypeName name="org.w3c.dom.Text"/>
     <fullyQualifiedTypeName name="edu.java.modifier07.Test"/>
     <fullyQualifiedTypeName name="subproject.AccountInfo"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="edu.java.inheritance01.BasicTv"/>
     <fullyQualifiedTypeName name="edu.java.inheritance01.SmartTv"/>
     <fullyQualifiedTypeName name="edu.java.inheritance02.BusinessPerson"/>
+    <fullyQualifiedTypeName name="edu.java.contact01_re.Contact"/>
+    <fullyQualifiedTypeName name="edu.java.contact01re.Account"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="edu.java.contact01.ContactMain01"/>
+    <fullyQualifiedTypeName name="edu.java.contact01.Contact"/>
 </qualifiedTypeNameHistroy>
