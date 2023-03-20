@@ -10,7 +10,6 @@
     <fullyQualifiedTypeName name="sample.work2.HumanState"/>
     <fullyQualifiedTypeName name="edu.java.class02.BasicTv"/>
     <fullyQualifiedTypeName name="sideproject.incomeexpenditure"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="sample.work3.reserve.DoReserve"/>
     <fullyQualifiedTypeName name="sample.work3.reserve.TimeTable"/>
     <fullyQualifiedTypeName name="edu.java.class07.Student"/>
@@ -29,8 +28,14 @@
     <fullyQualifiedTypeName name="edu.java.inheritance02.BusinessPerson"/>
     <fullyQualifiedTypeName name="edu.java.contact01_re.Contact"/>
     <fullyQualifiedTypeName name="edu.java.contact01re.Account"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="edu.java.contact01.ContactMain01"/>
     <fullyQualifiedTypeName name="edu.java.contact01.Contact"/>
+    <fullyQualifiedTypeName name="edu.java.inheritance04.Parent"/>
+    <fullyQualifiedTypeName name="edu.java.inheritance04.AnotherChild"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="repeat0320.Location"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="repeat0320.RepeatMain01"/>
 </qualifiedTypeNameHistroy>

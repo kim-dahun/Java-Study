@@ -41,11 +41,11 @@ public class ContactMain {
 							break;
 
 						case (2):
-							contma01.modifyContact();
+							contma01.deleteContact();
 							break;
 
 						case (3):
-							contma01.deleteContact();
+							contma01.modifyContact();
 							break;
 
 						case (4):
