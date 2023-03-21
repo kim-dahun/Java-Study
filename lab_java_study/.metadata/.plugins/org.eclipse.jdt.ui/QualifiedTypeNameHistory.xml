@@ -33,9 +33,11 @@
     <fullyQualifiedTypeName name="edu.java.inheritance04.Parent"/>
     <fullyQualifiedTypeName name="edu.java.inheritance04.AnotherChild"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="repeat0320.Location"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="repeat0320.RepeatMain01"/>
+    <fullyQualifiedTypeName name="interftest.BlackjackInf"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="edu.java.inheritance08.Rectangle"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>

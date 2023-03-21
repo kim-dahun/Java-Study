@@ -31,7 +31,7 @@ public class User {
 		this.password = password;
 	}
 	// toString() override : Format : "User(userId=..., password=...)" 하기 전과 후 테스트.
-	
+	// return String.format("User(userId=%s, password=%s)",this.userId, this.passowrd)
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
