@@ -62,6 +62,7 @@ public class DevCode {
 								
 								System.out.println("블랙잭");
 								gamerun=false;
+								break;
 							}
 							System.out.printf(" 딜러 점수 : %d 이므로 딜러가 이겼습니다.%n",deal);
 							

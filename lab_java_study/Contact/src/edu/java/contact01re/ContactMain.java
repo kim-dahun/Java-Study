@@ -34,25 +34,25 @@ public class ContactMain {
 					while (runMain01) {
 						
 						// 프로그램 사용 부분 ( 연락처 등록 / 수정 / 삭제 / 검색 / 출력 / 로그아웃 )
-						int selectUse = contMain.mainmenuSelect();
+						Menu selectUse = contMain.mainmenuSelect();
 						switch (selectUse) {
-						case (1):
+						case CREATE:
 							contma01.insertNewContact();
 							break;
 
-						case (2):
+						case DELETE:
 							contma01.deleteContact();
 							break;
 
-						case (3):
+						case UPDATE:
 							contma01.modifyContact();
 							break;
 
-						case (4):
+						case READ_BY_INDEX:
 							contma01.searchContact();
 							break;
 
-						case (5):
+						case READ_ALL:
 							contma01.viewContact();
 							break;
 						default:
@@ -72,7 +72,10 @@ public class ContactMain {
 			case (3):
 				run = false;
 
+			default:
+				run = false;
 			}
+			
 
 			System.out.println("프로그램 종료");
 
@@ -168,12 +171,26 @@ public class ContactMain {
 		return nowLogin;
 	}
 
-	public int mainmenuSelect() {
+	public Menu mainmenuSelect() {
 		System.out.println("--- 연락처 관리 모드 ---");
 		System.out.println("1. 연락처 등록 / 2. 연락처 삭제 / 3. 연락처 수정 / 4. 연락처 검색 / 5. 전체 리스트 / 6. 종료");
-		int select = Integer.parseInt(scan.nextLine());
-
-		return select;
+		
+		boolean check = true;
+		int select = 0;
+		while(check) {
+			System.out.print("입력 >>> ");
+		try {
+		
+		select = Integer.parseInt(scan.nextLine());
+		} catch(NumberFormatException e){
+			System.out.println("제대로 된 입력이 아닙니다. 다시 입력해주세요(정수)");
+			continue;
+		}
+		check = false;
+		}
+		Menu menu = Menu.getValue(select);
+		
+		return menu;
 	}
 
 }
