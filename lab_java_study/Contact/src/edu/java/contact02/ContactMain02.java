@@ -1,8 +1,11 @@
 package edu.java.contact02;
 
+import java.util.Arrays;
+
 //2023-03-17 ERROR 발생 관련 상황에 대해 고민.
 
 import java.util.Scanner;
+import edu.java.contact.menu.Menu;
 
 public class ContactMain02 {
 	// 상수(constant)
@@ -17,6 +20,8 @@ public class ContactMain02 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+
+		
 		System.out.println("***** 연락처 프로그램 v0.2 *****");
 		ContactMain02 app = new ContactMain02();
 		// -> static 이 아닌 메서드들을 사용하기 위해서 참조 변수를 생성.
@@ -25,7 +30,9 @@ public class ContactMain02 {
 		while (run) {
 			// 메인 메뉴 보여주기
 			// 메인 메뉴에서 선택된 값 저장
-			Menu menu = app.showMainMenu();
+			int select = app.showMainMenu();
+			Menu menu = Menu.getValue(select);
+			
 			// switch (variable) {}
 
 			switch (menu) {
@@ -63,12 +70,9 @@ public class ContactMain02 {
 		int inputNum = 0;
 		while (run) {
 			System.out.println("삭제하고 싶은 연락처의 순번을 입력해주세요.");
-			try {
-				inputNum = Integer.parseInt(scanner.nextLine());
-			} catch (NumberFormatException e) {
-				System.out.println("잘못된 입력입니다.");
-				continue;
-			}
+
+			inputNum = inputNumber();
+
 			run = false;
 		}
 		if (inputNum < 1 || inputNum > count) {
@@ -134,20 +138,16 @@ public class ContactMain02 {
 		while (run) {
 
 			System.out.print("수정할 연락처 인덱스 입력>");
-			try {
 
-				index = Integer.parseInt(scanner.nextLine());
-			} catch (NumberFormatException e) {
-				System.out.println("잘못된 입력입니다.");
-				continue;
-			}
+			index = inputNumber();
+
 			if (index > (count - 1) || index < 0) {
 				System.out.println("잘못된 입력값입니다.");
 				continue;
 			}
 
 			System.out.print("수정 전: ");
-			contacts[index].printInfo();
+			System.out.println(contacts[index]);
 
 			System.out.print("수정할 이름을 입력>");
 			String name = scanner.nextLine();
@@ -165,7 +165,7 @@ public class ContactMain02 {
 //		contacts[index] = new Contact(0,name,phone,email);
 
 			System.out.println("수정 후: ");
-			contacts[index].printInfo();
+			System.out.println(contacts[index]);
 			run = false;
 		}
 	} // 선생님 끝
@@ -193,24 +193,25 @@ public class ContactMain02 {
 //
 //	} // 내가 짠것 종료
 
-    public void selectContactByIndex() {
-        System.out.println();
-        System.out.println("--- 인덱스 검색 ---");
-        System.out.print("검색할 인덱스 입력> ");
-        int index = Integer.parseInt(scanner.nextLine());
-        
-        if (index >= 0 && index < count) {
-            contacts[index].printInfo();
-        } else {
-            System.out.println("해당 인덱스에는 연락처 정보가 없음...");
-        }
-        
-    }
-	
+	public void selectContactByIndex() {
+		System.out.println();
+		System.out.println("--- 인덱스 검색 ---");
+		System.out.print("검색할 인덱스 입력> ");
+		int index = inputNumber();
+
+		if (index >= 0 && index < count) {
+			System.out.println(contacts[index]);
+			
+		} else {
+			System.out.println("해당 인덱스에는 연락처 정보가 없음...");
+		}
+
+	}
+
 	public void viewContact() {
 		System.out.println("--- 연락처 목록 ---");
 		for (int i = 0; i < count; i++) {
-			contacts[i].printInfo();
+			System.out.println(contacts[i]);
 
 		}
 
@@ -246,7 +247,7 @@ public class ContactMain02 {
 
 	}
 
-	public Menu showMainMenu() {
+	public int showMainMenu() {
 
 		System.out.println();
 		System.out.println("---------------------------------------------------------");
@@ -255,20 +256,24 @@ public class ContactMain02 {
 		System.out.println("선택>");
 
 //		int result=scanner.nextInt();
-		boolean run = true;
-		int result = 0;
-		while (run) {
-			try {
-				result = Integer.parseInt(scanner.nextLine()); // 문자열을 Int 로 바꿔줌.
-			} catch (NumberFormatException e) {
-				System.out.println("잘못된 입력입니다. 다시 입력하세요.");
-				continue;
-			}
-			run = false;
-		}
-		Menu menu = Menu.getValue(result);
+		
+		int result = inputNumber();
+		
 
-		return menu;
+		return result;
+	}
+
+	public int inputNumber() {
+
+		while (true) {
+			try {
+				int n = Integer.parseInt(scanner.nextLine());
+				return n; // return: (1) 값을 메서드 호출한 곳에 반환. (2) 메서드 종료.
+			} catch (NumberFormatException e) {
+				System.out.println("정수를 입력 >>>");
+			}
+
+		}
 	}
 
 }

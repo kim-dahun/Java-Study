@@ -14,6 +14,8 @@ public class MethodTest01 {
 		int n1 = rand.nextInt(1,5);
 		double[] array = new double[n1];
 		
+	
+		
 		
 		
 		for ( int i = 0; i < n1 ; i++) {

@@ -3,7 +3,6 @@
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="edu.java.method02.MethodMain02"/>
     <fullyQualifiedTypeName name="java.lang.ProcessHandle.Info"/>
@@ -17,7 +16,6 @@
     <fullyQualifiedTypeName name="edu.java.class08.Account"/>
     <fullyQualifiedTypeName name="java.math.MathContext"/>
     <fullyQualifiedTypeName name="edu.java.modifier01.AccessTest"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="edu.java.modifier04.PublicClass"/>
     <fullyQualifiedTypeName name="edu.java.modifier03.User"/>
     <fullyQualifiedTypeName name="org.w3c.dom.Text"/>
@@ -32,7 +30,6 @@
     <fullyQualifiedTypeName name="edu.java.contact01.Contact"/>
     <fullyQualifiedTypeName name="edu.java.inheritance04.Parent"/>
     <fullyQualifiedTypeName name="edu.java.inheritance04.AnotherChild"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="repeat0320.Location"/>
     <fullyQualifiedTypeName name="repeat0320.RepeatMain01"/>
     <fullyQualifiedTypeName name="interftest.BlackjackInf"/>
@@ -41,7 +38,6 @@
     <fullyQualifiedTypeName name="edu.java.interface01.DatabaseModule"/>
     <fullyQualifiedTypeName name="java.sql.Time"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
-    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="java.security.Timestamp"/>
     <fullyQualifiedTypeName name="java.sql.Timestamp"/>
     <fullyQualifiedTypeName name="java.math.BigDecimal"/>
@@ -49,8 +45,18 @@
     <fullyQualifiedTypeName name="edu.java.exception05.Calculator"/>
     <fullyQualifiedTypeName name="edu.java.exception06.ExceptionMain06"/>
     <fullyQualifiedTypeName name="java.lang.Appendable"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="edu.java.contact02.Menu"/>
-    <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="edu.java.contact.menu.Menu"/>
+    <fullyQualifiedTypeName name="edu.java.contact03.ContactMain03"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+    <fullyQualifiedTypeName name="edu.java.contact03.ContactDaoImpl"/>
+    <fullyQualifiedTypeName name="edu.java.contact.model.Contact"/>
+    <fullyQualifiedTypeName name="java.sql.Wrapper"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="edu.java.mvc.menu.Menu"/>
 </qualifiedTypeNameHistroy>

@@ -9,6 +9,7 @@ public class ArrayTest02 {
 		// 동전갯수 구하기 배열로 풀어보기
 		// 코인배열, 갯수배열 ( 다차원배열로. )
 		// i-1 행에는 코인 종류, i 행에는 코인개수 입력
+
 		
 		Random rand = new Random();
 		int[] coincount = new int[4];
