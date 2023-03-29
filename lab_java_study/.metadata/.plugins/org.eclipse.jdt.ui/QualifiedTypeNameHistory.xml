@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="edu.java.inheritance08.Rectangle"/>
     <fullyQualifiedTypeName name="edu.java.interface01.DatabaseModule"/>
     <fullyQualifiedTypeName name="java.sql.Time"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
     <fullyQualifiedTypeName name="edu.java.file07.FileMain07"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="sample.work1.Solution"/>
 </qualifiedTypeNameHistroy>
