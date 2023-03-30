@@ -1,0 +1,4 @@
+인코딩 테스트
+UTF8
+MACOS 기본 인코딩
+MACOS default encoding

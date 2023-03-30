@@ -1,16 +1,21 @@
 package edu.java.contact.model;
 
+import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 // MVC(MODEL-VIEW-Controller) 아키텍쳐에서 Model에 해당하는 클래스.
 // 특별한 기능은 없는, 순수하게 데이터만 설계하는 클래스.
 // VO(Value Object) : 값(자료) 를 표현하는 객체.
 // DTO(Data Transfer Object): 데이터를 전달(메서드 argument, 리턴값) 할 때 사용되는 객체.
 
-public class Contact {
+public class Contact implements Serializable {
 	// field
 	private int cid;
 	private String name;
 	private String phone;
 	private String email;
+	private LocalDateTime savetime;
 
 	// constructor
 
@@ -24,6 +29,7 @@ public class Contact {
 		this.name = name;
 		this.phone = phone;
 		this.email = email;
+		
 	}
 
 	// method
@@ -56,6 +62,16 @@ public class Contact {
 		return cid;
 	}
 
+	public LocalDateTime getsavetime() {
+		
+		return this.savetime;
+	}
+	
+	public void setsavetime() {
+		
+		this.savetime = savetime.now();
+	}
+	
 	@Override
 	public String toString() {
 
