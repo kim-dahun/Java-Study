@@ -27,6 +27,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\user1\OneDrive\문서\GitHub\DahunKim.github.io\lab_java_study"/>
 			<item value="C:\workspace_real\DahunKim.github.io\lab_java_study"/>
 			<item value="C:\Users\user1\Documents\GitHub\DahunKim.github.io\lab_java_study"/>
 		</list>
