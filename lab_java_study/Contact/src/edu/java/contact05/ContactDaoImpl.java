@@ -20,9 +20,9 @@ public class ContactDaoImpl implements ContactDao {
 	// singleton step 2
 
 	private ContactDaoImpl() {
-		dataDir = FileUtil.initDataDir();
+		dataDir = FileUtil.initDataDir(); // 데이터 폴더 초기화
 		dataFile = new File(FileUtil.DATA_DIR, FileUtil.DATA_FILE);
-		contacts = FileUtil.initData();
+		contacts = FileUtil.initData(); // 데이터 초기화 - 파일의 내용을 메모리에 로딩.
 		
 	};
 	// ContactDaoImpl 에는 연락처 데이터를 변경하는 메서드들이 있음.

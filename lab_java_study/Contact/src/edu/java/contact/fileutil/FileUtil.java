@@ -43,8 +43,9 @@ public class FileUtil {
 	 */
 
 	public static File initDataDir() {
-		String cwd = System.getProperty("user.dir");
-		File f = new File(cwd, DATA_DIR);
+//		String cwd = System.getProperty("user.dir"); // 상대 경로로 만들때는 필요없음
+//		File f = new File(cwd, DATA_DIR); // 상대 경로로 만들때는 필요없음.
+		File f = new File(DATA_DIR);
 		if (!f.exists()) {
 			System.out.println("폴더가 생성되었습니다.");
 			f.mkdir();
@@ -142,8 +143,10 @@ public class FileUtil {
 		List<Contact> contacts = null;
 		if (f.exists()) {
 			contacts = readDataFromFile(f);
+			System.out.println("데이터를 로딩하였습니다.");
 		} else {
 			contacts = new ArrayList<>();
+			System.out.println("새로운 저장소를 연결했습니다.");
 		}
 
 		return contacts;
