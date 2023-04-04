@@ -1,36 +1,41 @@
 package backjoon;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		Scanner scan = new Scanner(System.in);
-		
-		int a = Integer.parseInt(scan.nextLine());
-		int b = Integer.parseInt(scan.nextLine());
-		int c = Integer.parseInt(scan.nextLine());
-		int d = Integer.parseInt(scan.nextLine());
-		int e = Integer.parseInt(scan.nextLine());
-		int f = Integer.parseInt(scan.nextLine());
-		
-		scan.close();
-		
-		
-		// 13-x + 13-y = 13;
-		
-		// 37 = (40 -x)(40-x) 
-		// Math.sqrt(인수);
-		
-		// 37 = sqrt(40-i)(40-i)+(0-j)(0-j);
+		long start = 0;
 		int count = 0;
+		Scanner scan = new Scanner(System.in);
+		int test = Integer.parseInt(scan.nextLine());
+		String[] a1 = new String[test];
+		int[] result = new int[test];
+		for(int k = 0 ; k<test ; k++) {
+		a1[k]=scan.nextLine();
+		
+		String[] s1 = a1[k].split(" ");
+		
+		int a = Integer.parseInt(s1[0]);
+		int b = Integer.parseInt(s1[1]);
+		int c = Integer.parseInt(s1[2]);
+		int d = Integer.parseInt(s1[3]);
+		int e = Integer.parseInt(s1[4]);
+		int f = Integer.parseInt(s1[5]);
+		
+		start = System.currentTimeMillis();
+		int maxLeng = 0;
+		if(c>f) {
+			maxLeng = c;
+		} else {
+			maxLeng = f;
+		}
 		
 		
 		
-		for(int i = -10000 ; i<=10000 ; i++) {
-			for(int j = -10000 ; j<10000 ; j++) {
+		for(int i = -maxLeng ; i<=maxLeng ; i++) {
+			for(int j = -maxLeng ; j<maxLeng ; j++) {
 				int disA = ((d-i)*(d-i))+((e-j)*(e-j));
 				int disB = ((a-i)*(a-i))+((b-j)*(b-j));
 				if(disA==f*f && disB==c*c) {
@@ -44,8 +49,20 @@ public class Main {
 			}
 		}
 		
+		result[k]=count;
+		count=0;
+		}
 		
-		System.out.println(count);
+		scan.close();
+		
+		for(int y : result) {
+			System.out.println(y);
+		}
+
+		long end = System.currentTimeMillis();
+		System.out.println(end-start);
+		
+		
 		
 	}
 
