@@ -50,7 +50,7 @@ public class AppMain04 {
 			"C:\\workspace_real\\DahunKim.github.io\\lab_java_study\\Java16_Swing\\images\\img03.jpg",
 			"C:\\workspace_real\\DahunKim.github.io\\lab_java_study\\Java16_Swing\\images\\img04.jpg",
 			"C:\\workspace_real\\DahunKim.github.io\\lab_java_study\\Java16_Swing\\images\\img05.jpg" };
-	private int count;
+	private int count; // 현재 화면에 보여지는 이미지 파일의 인덱스
 //	private int clickcheck;
 
 	/**

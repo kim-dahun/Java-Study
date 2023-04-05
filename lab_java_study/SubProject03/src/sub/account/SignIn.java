@@ -35,6 +35,7 @@ public class SignIn extends JFrame {
 	private JButton btnCheckId;
 	private static ArrayList<Account> listAcount = new ArrayList<>();
 	private static boolean checkId;
+	private int chcount;
 
 	/**
 	 * Launch the application.
@@ -238,13 +239,17 @@ public class SignIn extends JFrame {
 		} else if (obj==btnCheckId) {
 			for(int i = 0 ; i < listAcount.size(); i++) {
 				if(listAcount.get(i).getUserId().equals(textId.getText())) {
-					JOptionPane.showMessageDialog(btnCheckId,"중복된 ID가 있습니다.");
+					chcount++;
 					
 					break;
 				}
 			}
+			if(chcount>=1) {
+				JOptionPane.showMessageDialog(btnCheckId,"이미 중복된 ID가 존재합니다.");
+			} else {
 			JOptionPane.showMessageDialog(btnCheckId,"이용 가능한 ID입니다.");
 			checkId = true;
+			}
 		}
 		
 	}

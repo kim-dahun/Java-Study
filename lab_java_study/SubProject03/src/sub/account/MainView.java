@@ -15,11 +15,14 @@ import java.util.List;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 
 public class MainView {
 
 	private JFrame frame;
+	private JButton btnSignIn;
+	private JButton btnLogin;
 
 	/**
 	 * Launch the application.
@@ -27,20 +30,34 @@ public class MainView {
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
+				MainView window = new MainView();
+				window.frame.setVisible(true);
 				File f = new File("data", "backup.dat");
+				
+				if(f.exists()) {
+					
 				FileInputStream in = null;
 				BufferedInputStream bin = null;
 				ObjectInputStream oin = null;
+				
 				try {
-
+					
+					
+					
+					
+					
+					
+					
+					
+						
+				
 					in = new FileInputStream(f);
 					bin = new BufferedInputStream(in);
 					oin = new ObjectInputStream(bin);
 
+					SignIn.setListAcount((ArrayList)oin.readObject());
 					
-
-					MainView window = new MainView();
-					window.frame.setVisible(true);
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				} finally {
@@ -51,6 +68,10 @@ public class MainView {
 						e.printStackTrace();
 					}
 				}
+				
+				
+				
+			}
 			}
 		});
 	}
@@ -71,7 +92,7 @@ public class MainView {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
-		JButton btnSignIn = new JButton("회원가입");
+		btnSignIn = new JButton("회원가입");
 		btnSignIn.setFont(new Font("D2Coding", Font.PLAIN, 35));
 		btnSignIn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -90,7 +111,7 @@ public class MainView {
 		btnSignIn.setBounds(104, 172, 195, 137);
 		frame.getContentPane().add(btnSignIn);
 
-		JButton btnLogin = new JButton("로그인");
+		btnLogin = new JButton("로그인");
 		btnLogin.setFont(new Font("D2Coding", Font.PLAIN, 35));
 		btnLogin.setBounds(311, 172, 195, 137);
 		frame.getContentPane().add(btnLogin);
