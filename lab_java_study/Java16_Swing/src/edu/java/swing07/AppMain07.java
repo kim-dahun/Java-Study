@@ -23,9 +23,11 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
@@ -171,7 +173,7 @@ public class AppMain07 {
 					textEnglish.setText("");
 					textMath.setText("");
 				} catch (Exception e2) {
-					JOptionPane.showConfirmDialog(frame, "정수를 입력해주세요.", "정수 입력 요구 안내문", JOptionPane.CLOSED_OPTION,
+					JOptionPane.showConfirmDialog(frame, "정수를 입력해주세요." + e2.getMessage(), "정수 입력 요구 안내문", JOptionPane.CLOSED_OPTION,
 							JOptionPane.WARNING_MESSAGE, null);
 					textKorean.setText("");
 					textEnglish.setText("");
@@ -213,6 +215,22 @@ public class AppMain07 {
 		btnSave = new JButton("저장");
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try 
+				(FileWriter fw = new FileWriter("data/datalist.txt");
+						BufferedWriter bw = new BufferedWriter(fw);
+						)
+				{
+					bw.write("국 / 영 / 수 / 합계 / 평균\n");
+					for(int i = 0; i<scoreList.size(); i++) {
+						
+						bw.write(scoreList.get(i).getKorean() + " / " + scoreList.get(i).getEnglish() + " / " + scoreList.get(i).getMath() + " / " + scoreList.get(i).getTotal() + " / " + scoreList.get(i).getMean(scoreList.get(i).getTotal()) + "\n");
+						
+					}
+					
+				} catch (Exception e2) {
+					// TODO: handle exception
+					e2.printStackTrace();
+				}
 				
 				try 
 				(FileOutputStream out = new FileOutputStream(FILE);
@@ -220,6 +238,7 @@ public class AppMain07 {
 						ObjectOutputStream oout = new ObjectOutputStream(bout);)
 				{
 					oout.writeObject(scoreList);
+					
 				} catch (Exception e2) {
 					// TODO: handle exception
 					e2.printStackTrace();
@@ -235,13 +254,28 @@ public class AppMain07 {
 
 	public void removeList() {
 		int nowRow = table.getSelectedRow();
+		int[] selectRows = table.getSelectedRows();
 		if (nowRow == -1) {
-			JOptionPane.showConfirmDialog(frame, "선택한 인덱스가 없습니다.", "인덱스 범위 참조 오류", JOptionPane.CLOSED_OPTION);
+			JOptionPane.showConfirmDialog(frame, "선택한 인덱스가 없습니다.", "인덱스 범위 참조 오류", JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE,null);
 
 			return;
+		} else if(selectRows.length>1){
+			
+			int select = JOptionPane.showConfirmDialog(frame, "정말로 삭제하시겠습니까?", "삭제 확인" , JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null);
+			if(select==0) {
+			for(int i = 0; i<selectRows.length; i++) {
+				model.removeRow(selectRows[0]);
+				scoreList.remove(selectRows[0]);
+				
+			}
+			}
 		} else {
+			// JOptionPane.YES_OPTION ==> 다이얼로그의 선택값을 기억하지 못할 경우
+			int select = JOptionPane.showConfirmDialog(frame, "정말로 삭제하시겠습니까?", "삭제 확인" , JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null);
+			if(select==0) {
 			model.removeRow(nowRow);
 			scoreList.remove(nowRow);
+			}
 		}
 
 	}
