@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
-    <fullyQualifiedTypeName name="java.util.Set"/>
-    <fullyQualifiedTypeName name="java.util.HashSet"/>
-    <fullyQualifiedTypeName name="test.Solution03"/>
-    <fullyQualifiedTypeName name="edu.java.inner01.InnerMain01"/>
-    <fullyQualifiedTypeName name="edu.java.inner01.Outer"/>
-    <fullyQualifiedTypeName name="edu.java.inner01.Enclosing"/>
-    <fullyQualifiedTypeName name="edu.java.inner01.Outer.Inner"/>
-    <fullyQualifiedTypeName name="edu.java.inner01.Enclosing.Nested"/>
-    <fullyQualifiedTypeName name="edu.java.inner02.Book"/>
-    <fullyQualifiedTypeName name="edu.java.inner02.Book.BookBuilder"/>
-    <fullyQualifiedTypeName name="edu.java.inner03.Button"/>
-    <fullyQualifiedTypeName name="edu.java.inner03.OpenButtonListener"/>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
-    <fullyQualifiedTypeName name="edu.java.lambda04.LambdaMain04"/>
     <fullyQualifiedTypeName name="edu.java.lambda04.MyFilter"/>
     <fullyQualifiedTypeName name="edu.java.lambda04.MyMapper"/>
     <fullyQualifiedTypeName name="javax.sound.midi.ShortMessage"/>
@@ -60,4 +43,21 @@
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="org.jfree.chart.ChartPanel"/>
+    <fullyQualifiedTypeName name="org.jfree.chart.JFreeChart"/>
+    <fullyQualifiedTypeName name="org.jfree.chart.ChartFactory"/>
+    <fullyQualifiedTypeName name="org.jfree.data.gantt.TaskSeries"/>
+    <fullyQualifiedTypeName name="org.jfree.data.gantt.Task"/>
+    <fullyQualifiedTypeName name="org.jfree.data.category.IntervalCategoryDataset"/>
+    <fullyQualifiedTypeName name="org.jfree.data.gantt.TaskSeriesCollection"/>
+    <fullyQualifiedTypeName name="java.awt.Font"/>
+    <fullyQualifiedTypeName name="org.jfree.chart.plot.CategoryPlot"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="org.jfree.data.time.SimpleTimePeriod"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="org.jfree.chart.axis.DateTickUnit"/>
+    <fullyQualifiedTypeName name="java.text.DateFormat"/>
+    <fullyQualifiedTypeName name="org.jfree.chart.axis.DateAxis"/>
 </qualifiedTypeNameHistroy>
