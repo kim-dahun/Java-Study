@@ -1,10 +1,21 @@
 package test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+
 public class Solution03 {
 	public String solution(String polynomial) {
         String answer = "";
         
+       
+        
+        List<Integer> ia = new ArrayList<>();
+        ia.sort(null);
+        
         String[] s1 = polynomial.split(" ");
+        Arrays.sort(s1);
         int varX = 0;
         int varY = 0;
         for(int i = 0 ; i<s1.length ; i++){
