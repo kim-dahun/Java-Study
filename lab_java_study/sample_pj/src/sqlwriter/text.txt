@@ -1,0 +1,11 @@
+    SELECT empno, ename, d.deptno,  d.dname
+    FROM emp e
+        LEFT OUTER JOIN dept d ON e.deptno = d.deptno;
+        
+    SELECT empno, ename, e.deptno, d.dname
+		FROM emp e
+    		RIGHT OUTER JOIN dept d ON e.deptno = d.deptno;
+    		
+    		SELECT empno, ename, e.deptno, d.dname
+FROM emp e
+    FULL OUTER JOIN dept d ON d.deptno=e.deptno;

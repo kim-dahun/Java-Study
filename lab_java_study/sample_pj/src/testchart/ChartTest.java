@@ -32,6 +32,8 @@ import javax.swing.JTextField;
 
 public class ChartTest {
 
+	
+	
 	private JFrame frame;
 	private JTextField textField;
 	private Font mainfont = new Font("D2Coding", Font.PLAIN, 15);
