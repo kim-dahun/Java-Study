@@ -111,12 +111,12 @@ public class ChartTest {
 		// 간트차트 최초날 -> before // 간트차트 마지막날 -> after
 		Date now = new Date();
 		Date before = new Date(now.getYear(),now.getMonth(),now.getDay());
-		Date after = new Date(now.getYear(),now.getMonth(),now.getDay()+14);
+		Date after = new Date(now.getYear(),now.getMonth(),now.getDay()+7);
 		
 		// 범위 관련된 설정값
 		DateAxis axis = (DateAxis) caseSet.getRangeAxis(); // DateAxis 타입으로 캐스팅, CategoryPlot 타입의 caseSet 변수의 메서드 getRangeAxis를 호출함.
 		axis.setRange(before, after);
-		DateTickUnit unit = new DateTickUnit(DateTickUnit.DAY,2); // DateTickUnit (기간의 간격 조건 = 시간 날짜 등, 간격범위  )
+		DateTickUnit unit = new DateTickUnit(DateTickUnit.DAY,1); // DateTickUnit (기간의 간격 조건 = 시간 날짜 등, 간격범위  )
 		axis.setTickUnit(unit); 
 
 		axis.setDateFormatOverride(new SimpleDateFormat("MM-dd")); // 날짜 형식 포맷

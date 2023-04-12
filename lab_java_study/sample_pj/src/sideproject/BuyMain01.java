@@ -46,6 +46,7 @@ public class BuyMain01 {
 		apple.eaProd();
 		apple.avgAsset();
 		
+		
 		apple.sell(150);
 		apple.avgPrice();
 		apple.eaProd();
