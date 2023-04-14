@@ -10,6 +10,17 @@ import java.time.LocalDateTime;
 // DTO(Data Transfer Object): 데이터를 전달(메서드 argument, 리턴값) 할 때 사용되는 객체.
 
 public class Contact implements Serializable {
+	public interface Entity {
+
+		String TBL_NAME = "CONTACTS";
+		String COL_CID = "CID";
+		String COL_NAME = "NAME";
+		String COL_PHONE = "PHONE";
+		String COL_EMAIL = "EMAIL";
+		
+
+	}
+	
 	// field
 	private int cid;
 	private String name;

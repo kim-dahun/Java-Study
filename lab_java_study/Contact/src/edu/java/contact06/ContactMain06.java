@@ -9,9 +9,10 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
+import edu.java.contact.controller.ContactDaoImpl;
 import edu.java.contact.fileutil.FileUtil;
 import edu.java.contact.model.Contact;
-import edu.java.contact05.ContactDaoImpl;
+
 
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
@@ -185,7 +186,7 @@ public class ContactMain06 {
 			
 		}
 		
-		ContactUpdateFrame.showContactUpdateFrame(frame, select[0], ContactMain06.this);
+//		ContactUpdateFrame.showContactUpdateFrame(frame, select[0], ContactMain06.this);
 		
 		
 	}
