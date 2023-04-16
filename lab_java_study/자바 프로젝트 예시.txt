@@ -1,0 +1,27 @@
+구현 기능
+
+관리자 / 일반유저
+
+
+관리자의 기능
+
+- 회원 가입 승인 기능
+
+- 부서, 사번 부여 ( 가입 승인과 동시에 )
+
+- 사원별 근무시트 확인
+
+- 전체 공지사항 입력
+
+- 
+
+https://news.naver.com/main/list.naver?mode=LS2D&mid=shm&sid1=101&sid2=262 
+101:경제 / 262:글로벌경제 
+
+
+파파고 번역 방식
+https://papago.naver.com/?sk=en&tk=ko&hn=1&st=You%20son%20of%20a%20gun
+?sk=en&tk : 번역할 언어의 타입 / =es&st or ko&hn : 번역해서 리턴할 언어 타입
+
+
+
